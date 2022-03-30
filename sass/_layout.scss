@@ -1,0 +1,18 @@
+@use "abstracts/" as *;
+// The designs were created to the following widths:
+// - Mobile: 375px
+// - Desktop: 1440px
+body {
+  @include flex(row, center, center);
+  padding: 0 1rem;
+  background: linear-gradient($Softviolet, $Softblue);
+  h1 {
+    color: $Verydarkdesaturatedblue;
+  }
+  h2 {
+    color: $Verydarkgrayishblue;
+  }
+  p {
+    color: $Darkgrayishblue;
+  }
+}

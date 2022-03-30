@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$font-size: 0.75rem;
+
+$ff: "Kumbh Sans", sans-serif;
+
+$fw-400: 400;
+$fw-700: 700;
+
+body {
+  font-family: $ff;
+  h1 {
+    font-weight: $fw-700;
+  }
+  h2 {
+    // font-size: 1rem !important;
+  }
+  p,
+  h2 {
+    font-size: $font-size;
+    font-weight: $fw-400;
+  }
+}
+.accordion__panel:hover {
+  h2 {
+    font-weight: $fw-700;
+  }
+}

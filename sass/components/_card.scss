@@ -1,0 +1,118 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+.card {
+  @include flex(column, flex-end, flex-start);
+  background-color: #fff;
+  position: relative;
+  min-height: 32.0625rem;
+  width: 18.75rem;
+  border-radius: 1.5rem;
+  box-shadow: 10px 15px 40px 0px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .accordion {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2rem;
+    &__header {
+      padding: 0.75rem 0;
+    }
+
+    &__panel {
+      border-bottom: $Lightgrayishblue solid 1px;
+      p {
+        display: none;
+        padding-bottom: 0.75rem;
+      }
+      h2 {
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      h2:after {
+        content: "";
+        background-image: url(../../images/icon-arrow-down.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 10px;
+        transition: all 0.3s ease;
+      }
+      h2.active:after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+      &:hover {
+        cursor: pointer;
+        h2 {
+          color: $Verydarkdesaturatedblue;
+        }
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    background-image: url(../../images/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    top: -20.5%;
+    margin: 0 auto;
+    z-index: 2;
+  }
+  &::after {
+    content: "";
+    background-image: url(../../images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 250px;
+    height: 180px;
+    top: -7.5%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+  @media (min-width: 48rem) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10% 90%;
+    min-width: 57.5rem;
+    min-height: 31.875rem;
+    margin-left: auto;
+
+    h1 {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      text-align: left;
+
+      align-self: end;
+    }
+
+    .accordion {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      width: 80%;
+    }
+  }
+}
+.active {
+  color: $Verydarkdesaturatedblue;
+  font-weight: $fw-700;
+}
+.rotate {
+  transform: rotate(360deg);
+}
