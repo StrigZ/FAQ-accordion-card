@@ -127,6 +127,7 @@ body p {
   border-radius: 1.5rem;
   box-shadow: 10px 15px 40px 0px rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
+  overflow: hidden;
 }
 .card__title {
   width: 100%;
@@ -137,6 +138,7 @@ body p {
   text-align: left;
   width: 100%;
   margin-bottom: 2rem;
+  z-index: 1;
 }
 .card .accordion__header {
   padding: 0.75rem 0;
@@ -145,8 +147,9 @@ body p {
   border-bottom: #e7e7e9 solid 1px;
 }
 .card .accordion__panel p {
-  display: none;
-  padding-bottom: 0.75rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 .card .accordion__panel h2 {
   position: relative;
@@ -154,7 +157,7 @@ body p {
 }
 .card .accordion__panel h2:after {
   content: "";
-  background-image: url(../../images/icon-arrow-down.svg);
+  background-image: url(../images/icon-arrow-down.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -177,7 +180,7 @@ body p {
 }
 .card::before {
   content: "";
-  background-image: url(../../images/illustration-woman-online-mobile.svg);
+  background-image: url(../images/illustration-woman-online-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -188,9 +191,19 @@ body p {
   margin: 0 auto;
   z-index: 2;
 }
+@media (min-width: 48rem) {
+  .card::before {
+    width: 475px;
+    height: 350px;
+    top: 15%;
+    left: -10%;
+    background-image: url(../images/illustration-woman-online-desktop.svg);
+    background-size: contain;
+  }
+}
 .card::after {
   content: "";
-  background-image: url(../../images/bg-pattern-mobile.svg);
+  background-image: url(../images/bg-pattern-mobile.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -200,6 +213,17 @@ body p {
   top: -7.5%;
   margin: 0 auto;
   z-index: 1;
+}
+@media (min-width: 48rem) {
+  .card::after {
+    width: 1250px;
+    height: 775px;
+    top: -35%;
+    left: -70%;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-size: contain;
+    z-index: 0;
+  }
 }
 @media (min-width: 48rem) {
   .card {
