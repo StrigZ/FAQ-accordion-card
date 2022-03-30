@@ -10,6 +10,7 @@
   border-radius: 1.5rem;
   box-shadow: 10px 15px 40px 0px rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
+  overflow: hidden;
 
   &__title {
     width: 100%;
@@ -20,6 +21,7 @@
     text-align: left;
     width: 100%;
     margin-bottom: 2rem;
+    z-index: 1;
     &__header {
       padding: 0.75rem 0;
     }
@@ -27,8 +29,10 @@
     &__panel {
       border-bottom: $Lightgrayishblue solid 1px;
       p {
-        display: none;
-        padding-bottom: 0.75rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        // padding-bottom: 0.75rem;
       }
       h2 {
         position: relative;
@@ -72,6 +76,14 @@
     top: -20.5%;
     margin: 0 auto;
     z-index: 2;
+    @media (min-width: 48rem) {
+      width: 475px;
+      height: 350px;
+      top: 15%;
+      left: -10%;
+      background-image: url(../images/illustration-woman-online-desktop.svg);
+      background-size: contain;
+    }
   }
   &::after {
     content: "";
@@ -85,6 +97,15 @@
     top: -7.5%;
     margin: 0 auto;
     z-index: 1;
+    @media (min-width: 48rem) {
+      width: 1250px;
+      height: 775px;
+      top: -35%;
+      left: -70%;
+      background-image: url(../images/bg-pattern-desktop.svg);
+      background-size: contain;
+      z-index: 0;
+    }
   }
   @media (min-width: 48rem) {
     display: grid;
