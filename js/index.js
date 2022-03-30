@@ -14,8 +14,8 @@ $(".accordion__panel").click(function (e) {
   for (let e of $(".accordion__panel")) {
     if (e !== this) {
       $(e.firstElementChild).removeClass("active");
-      $(e.lastElementChild).removeClass("slide");
       $(e.lastElementChild).css("max-height", "0");
+      $(e.lastElementChild).removeClass("slide");
     }
   }
 
