@@ -23,5 +23,7 @@ $(".accordion__panel").click(function (e) {
   if ($(p).css("max-height")[0] === "0") {
     // console.log($(p)[0].scrollHeight + "px");
     $(p).css("max-height", $(p)[0].scrollHeight + "px");
+  } else {
+    $(p).css("max-height", "0");
   }
 });

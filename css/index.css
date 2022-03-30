@@ -127,7 +127,6 @@ body p {
   border-radius: 1.5rem;
   box-shadow: 10px 15px 40px 0px rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
-  overflow: hidden;
 }
 .card__title {
   width: 100%;
@@ -189,7 +188,7 @@ body p {
   height: 180px;
   top: -20.5%;
   margin: 0 auto;
-  z-index: 2;
+  z-index: 1;
 }
 @media (min-width: 48rem) {
   .card::before {
@@ -233,6 +232,7 @@ body p {
     min-width: 57.5rem;
     min-height: 31.875rem;
     margin-left: auto;
+    overflow: hidden;
   }
   .card h1 {
     grid-column: 2/3;
