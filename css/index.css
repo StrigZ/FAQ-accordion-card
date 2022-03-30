@@ -92,6 +92,11 @@ body h2 {
   font-size: 0.75rem;
   font-weight: 400;
 }
+@media (min-width: 768px) {
+  body h2 {
+    font-size: 1rem;
+  }
+}
 
 .accordion__panel:hover h2 {
   font-weight: 700;
@@ -245,6 +250,22 @@ body p {
     grid-row: 2/3;
     width: 80%;
   }
+}
+
+main {
+  position: relative;
+}
+main::before {
+  content: "";
+  position: absolute;
+  background-image: url(../images/illustration-box-desktop.svg);
+  background-size: contain;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+  z-index: 99;
+  bottom: 22%;
+  left: -12%;
 }
 
 .active {

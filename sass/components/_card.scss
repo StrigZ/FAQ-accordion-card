@@ -129,6 +129,22 @@
     }
   }
 }
+
+main {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/illustration-box-desktop.svg);
+    background-size: contain;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+    bottom: 22%;
+    left: -12%;
+  }
+}
 .active {
   color: $Verydarkdesaturatedblue;
   font-weight: $fw-700;
