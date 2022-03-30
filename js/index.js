@@ -14,11 +14,13 @@ $(".accordion__panel").click(function (e) {
   for (let e of $(".accordion__panel")) {
     if (e !== this) {
       $(e.firstElementChild).removeClass("active");
+      $(e.lastElementChild).removeClass("slide");
       $(e.lastElementChild).css("max-height", "0");
     }
   }
 
   $(h2).toggleClass("active");
+  $(p).toggleClass("slide");
 
   if ($(p).css("max-height")[0] === "0") {
     // console.log($(p)[0].scrollHeight + "px");

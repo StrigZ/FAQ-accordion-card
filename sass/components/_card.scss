@@ -31,7 +31,6 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
-        // padding-bottom: 0.75rem;
       }
       h2 {
         position: relative;
@@ -133,4 +132,7 @@
 .active {
   color: $Verydarkdesaturatedblue;
   font-weight: $fw-700;
+}
+.slide {
+  padding-bottom: 0.75rem;
 }

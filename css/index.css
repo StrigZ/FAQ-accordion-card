@@ -250,4 +250,8 @@ body p {
 .active {
   color: #1d1e35;
   font-weight: 700;
+}
+
+.slide {
+  padding-bottom: 0.75rem;
 }/*# sourceMappingURL=index.css.map */
