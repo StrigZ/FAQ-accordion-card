@@ -233,7 +233,6 @@ body p {
   .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 10% 90%;
     min-width: 57.5rem;
     min-height: 31.875rem;
     margin-left: auto;
@@ -252,20 +251,22 @@ body p {
   }
 }
 
-main {
-  position: relative;
-}
-main::before {
-  content: "";
-  position: absolute;
-  background-image: url(../images/illustration-box-desktop.svg);
-  background-size: contain;
-  background-position: center;
-  width: 200px;
-  height: 200px;
-  z-index: 99;
-  bottom: 22%;
-  left: -12%;
+@media (min-width: 48rem) {
+  main {
+    position: relative;
+  }
+  main::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/illustration-box-desktop.svg);
+    background-size: contain;
+    background-position: center;
+    width: 200px;
+    height: 200px;
+    z-index: 99;
+    bottom: 22%;
+    left: -12%;
+  }
 }
 
 .active {
